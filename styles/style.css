@@ -1,0 +1,114 @@
+
+html {
+    background-color: mintcream;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: 96%;
+    height: 600px;
+    margin: 2%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 25% 1fr 10%;
+    grid-template-columns: 20% 1fr 15%;
+}
+
+.a {
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 2%;
+}
+
+header {
+    background-color: lightcoral;
+}
+
+header h1 {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    padding-left: 0;
+}
+
+header li {
+    margin-right: 1.5em;
+}
+
+.left-pane {
+    background-color: turquoise;
+}
+
+.left-pane ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 5%;
+}
+
+.left-pane li {
+    margin-bottom: 1.5em;
+    justify-content: flex-start;
+}
+
+section {
+    background-color: white;
+}
+
+section div {
+    border-radius: 6px;
+    border: 3px dotted lightgray;
+    margin-bottom: 1em;
+    padding: 0 1em;
+}
+
+.right-pane {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: ivory;
+}
+
+.right-pane p {
+    border: 1px dotted gray;
+    padding: 10px;
+    margin-bottom: 3em;
+}
+
+footer {
+    background-color: lightgray;
+}
+
+/* desktop */
+@media (min-width: 992px) {
+    header {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .left-pane {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    section {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .right-pane {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+
+    footer {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+}
