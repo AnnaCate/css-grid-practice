@@ -1,7 +1,7 @@
 
 html {
     background-color: mintcream;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .wrapper {
@@ -27,6 +27,8 @@ header {
 header h1 {
     display: flex;
     flex-flow: row nowrap;
+    margin-bottom: 25px;
+    font-size: 2em;
 }
 
 header ul {
@@ -44,23 +46,45 @@ header li {
     background-color: turquoise;
 }
 
+.left-pane h3 {
+    padding-left: 5%;
+}
+
 .left-pane ul {
     list-style-type: none;
     display: flex;
     flex-flow: column nowrap;
-    padding-left: 5%;
+    padding-left: 9%;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .left-pane li {
     margin-bottom: 1.5em;
-    justify-content: flex-start;
+    border: 2px dotted black;
+    padding: 10px;
+    background-color: rgb(26, 90, 76);
+    width: 150px;
+}
+
+.left-pane a {
+    text-decoration: none;
+    color: white;
+}
+
+.left-pane li:hover {
+    -webkit-box-shadow: 3px 3px 3px -3px gray;
+}
+
+.left-pane li:active {
+    transform: translate(1px, 1px);
 }
 
 section {
     background-color: white;
 }
 
-section div {
+section article {
     border-radius: 6px;
     border: 3px dotted lightgray;
     margin-bottom: 1em;
@@ -71,14 +95,17 @@ section div {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: ivory;
 }
 
 .right-pane p {
     border: 1px dotted gray;
+    width: 125px;
+    height: 125px;
     padding: 10px;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
+    background-color: white;
 }
 
 footer {
